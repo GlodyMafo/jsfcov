@@ -11,10 +11,9 @@ const Navbar = () => {
     <nav className="bg-white p-2 shadow-md mb-6">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-20">
         <div className="w-48">
-          <img src="./public/Logo.png" alt="logo" />
+          <img src="/Logo.png" alt="logo" />
         </div>
         
-        {/* Hamburger Icon */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-[#E66917] focus:outline-none">
             <svg
@@ -34,7 +33,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Desktop Menu */}
+     
         <div className={`flex-col md:flex-row md:flex ${isOpen ? 'flex' : 'hidden'} md:flex items-center`}>
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
             <li>
