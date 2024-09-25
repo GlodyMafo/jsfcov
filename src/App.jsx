@@ -7,16 +7,13 @@ const App = () => {
     <div className="relative min-h-screen overflow-hidden">
       <Navbar />
 
-      {/* Arrière-plan géométrique */}
       <div className="relative z-0">
         <div className="absolute inset-0 -z-10">
-          {/* Cercle animé - visible seulement sur écran moyen et plus grand */}
+        
           <div className="hidden md:block absolute top-10 left-10 w-40 h-40 bg-[#E66917] rounded-full opacity-20 animate-bounce-slow"></div>
 
-          {/* Triangle animé - visible seulement sur écran moyen et plus grand */}
           <div className="hidden md:block absolute bottom-10 right-10 w-0 h-0 border-l-[60px] border-l-transparent border-t-[120px] border-t-[#59252D] opacity-30 animate-spin-slow"></div>
 
-          {/* Carré animé - visible seulement sur écran moyen et plus grand */}
           <div className="hidden md:block absolute bottom-20 left-20 w-24 h-24 bg-[#E66917] opacity-25 animate-pulse"></div>
         </div>
 

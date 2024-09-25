@@ -13,7 +13,6 @@ const FileUpload = () => {
   };
 
   const validateFile = (selectedFile) => {
-    // Validation du type de fichier (seuls les fichiers PDF sont autorisés)
     if (selectedFile && selectedFile.type !== 'application/pdf') {
       setMessage('Please select a valid PDF file.');
       setFile(null); 
