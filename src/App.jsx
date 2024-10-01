@@ -1,6 +1,8 @@
 import React from 'react';
 import FileUpload from './components/FileUpload';
 import Navbar from './components/Navbar';
+import ImageUploader from './components/ImageUploader';
+import ImageToText from './components/ImageUploader';
 
 const App = () => {
   return (
@@ -27,7 +29,8 @@ const App = () => {
         <div className="flex justify-around mt-">
           <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-center mb-6">Convert PDF to WORD</h2>
-            <FileUpload />
+            {/* <FileUpload /> */}
+            <ImageToText/>
           </div>
         </div>
       </div>
