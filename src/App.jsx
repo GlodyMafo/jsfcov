@@ -3,11 +3,13 @@ import FileUpload from './components/FileUpload';
 import Navbar from './components/Navbar';
 import ImageUploader from './components/ImageUploader';
 import ImageToText from './components/ImageUploader';
+import LandingPage from './components/LandingPage';
 
 const App = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <Navbar />
+      <LandingPage/>
+      {/* <Navbar /> */}
 
       <div className="relative z-0">
         <div className="absolute inset-0 -z-10">
@@ -30,7 +32,7 @@ const App = () => {
           <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-center mb-6">Convert PDF to WORD</h2>
             {/* <FileUpload /> */}
-            <ImageToText/>
+            {/* <ImageToText/> */}
           </div>
         </div>
       </div>

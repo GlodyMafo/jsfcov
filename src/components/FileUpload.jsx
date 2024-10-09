@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { FaFilePdf, FaCloudUploadAlt } from 'react-icons/fa'; 
+import { FaFilePdf, FaCloudUploadAlt } from 'react-icons/fa';
+import axios from 'axios'; // Import axios
 
 const FileUpload = () => {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [isDragging, setIsDragging] = useState(false); 
+  const [isDragging, setIsDragging] = useState(false);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -15,7 +16,7 @@ const FileUpload = () => {
   const validateFile = (selectedFile) => {
     if (selectedFile && selectedFile.type !== 'application/pdf') {
       setMessage('Please select a valid PDF file.');
-      setFile(null); 
+      setFile(null);
     } else {
       setFile(selectedFile);
       setMessage('');
@@ -26,7 +27,7 @@ const FileUpload = () => {
     e.preventDefault();
     setIsDragging(false);
     const droppedFile = e.dataTransfer.files[0];
-    validateFile(droppedFile); 
+    validateFile(droppedFile);
   };
 
   const handleSubmit = async (e) => {
@@ -40,47 +41,39 @@ const FileUpload = () => {
     const formData = new FormData();
     formData.append('pdf', file);
 
-    setLoading(true); 
+    setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/pdftoword', {
-        method: 'POST',
-        body: formData,
+      const response = await axios.post('https://api-jfc.onrender.com/pdftoword', formData, {
+        responseType: 'blob',
       });
 
-      if (response.ok) {
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
+      const blob = new Blob([response.data]);
+      const url = window.URL.createObjectURL(blob);
 
-     
-        const originalFileName = file.name.split('.').slice(0, -1).join('.');
-        const fileName = `${originalFileName} By_Josephine_Files_Converter.docx`;
+      const originalFileName = file.name.split('.').slice(0, -1).join('.');
+      const fileName = `${originalFileName} By_Josephine_Files_Converter.docx`;
 
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', fileName); 
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', fileName);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
 
-        setMessage('Conversion successful! File is downloading...');
-        setFile(null); 
-        e.target.reset(); 
-
-      } else {
-        setMessage('Conversion failed. Please try again.');
-      }
+      setMessage('Conversion successful! File is downloading...');
+      setFile(null);
+      e.target.reset();
     } catch (error) {
       console.error('An error occurred during the conversion:', error);
       setMessage('An error occurred during the conversion.');
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   return (
     <div className="container mx-auto">
- 
       <div
         className={`border-2 border-dashed p-8 rounded-md text-center transition-colors duration-200 
         ${isDragging ? 'border-[#E66917] bg-indigo-50' : 'border-gray-300'}`}
@@ -116,7 +109,7 @@ const FileUpload = () => {
             <button 
               type="submit" 
               className={`w-full bg-[#E66917] text-white py-2 px-4 rounded hover:bg-[#59252D] transition duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-              disabled={loading} 
+              disabled={loading}
             >
               {loading ? 'Converting...' : 'Convert'}
             </button>

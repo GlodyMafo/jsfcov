@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReactQuill from 'react-quill';
@@ -32,7 +33,7 @@ const ImageToText = () => {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:8000/imgtodoc', formData, {
+            const response = await axios.post('https://api-jfc.onrender.com/imgtodoc', formData, { // Assurez-vous que l'URL est correcte
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -114,3 +115,4 @@ const ImageToText = () => {
 };
 
 export default ImageToText;
+
