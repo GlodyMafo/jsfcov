@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'; // Pour le smooth scrolling
 import { Transition } from '@headlessui/react'; // Pour les animations
 import { BsCheckLg,BsArrowRight } from "react-icons/bs";
+import FeatureCard from './FeatureCard';
+import FeaturesSection from './FeatureSection';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -172,41 +174,19 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-20 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">Fonctionnalités</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4">
-                <svg className="w-12 h-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Conversion Rapide</h4>
-              <p>Transformez vos fichiers en quelques secondes grâce à notre technologie optimisée.</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4">
-                <svg className="w-12 h-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12h18M3 6h18M3 18h18" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Support de Plusieurs Formats</h4>
-              <p>Convertissez des fichiers PDF, DOCX, JPG, et bien plus encore sans effort.</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4">
-                <svg className="w-12 h-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold mb-2">Interface Simple</h4>
-              <p>Une interface intuitive pour une utilisation facile et rapide, même pour les débutants.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
+     {/* Features */}
+<section id="features" className="py-24 bg-[#FFFDFA]">
+  <div className="container mx-auto px-6 md:px-12">
+    <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 mx-40 text-gray-800">
+      Des Fonctionnalités Puissantes pour une Conversion Fluide
+    </h3>
+    <FeaturesSection/>
+  </div>
+</section>
+
+
+     
 
       {/* Demo Section */}
       <section className="py-20 bg-gray-100">
