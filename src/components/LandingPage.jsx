@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'; // Pour le smooth scrolling
 import { Transition } from '@headlessui/react'; // Pour les animations
+import { BsCheckLg,BsArrowRight } from "react-icons/bs";
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,7 @@ const LandingPage = () => {
       {/* Header */}
       <header className={`fixed px-20 mb-20 top-0 w-full transition duration-300 z-50 ${isScrolled ? 'bg-white shadow-md backdrop-filter backdrop-blur-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="public/josephine_Logo.png" alt="" className={`w-40 transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`}/>
+          <img src="public/josephine_Logo.png" alt="" className={`w-40 transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
           {/* Desktop Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-6">
@@ -238,31 +239,28 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 bg-gray-200">
-        <div className="container mx-auto px-6 md:px-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">Tarifs</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Gratuit */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h4 className="text-2xl font-semibold mb-4 text-center">Gratuit</h4>
-              <p className="text-center mb-6">Accès limité aux fonctionnalités de base.</p>
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition">Commencer</button>
-            </div>
-            {/* Pro */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h4 className="text-2xl font-semibold mb-4 text-center">Pro</h4>
-              <p className="text-center mb-6">Accès complet aux fonctionnalités avancées.</p>
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition">S'abonner</button>
-            </div>
-            {/* Entreprise */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h4 className="text-2xl font-semibold mb-4 text-center">Entreprise</h4>
-              <p className="text-center mb-6">Solutions personnalisées pour votre entreprise.</p>
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition">Contactez-nous</button>
-            </div>
-          </div>
-        </div>
-      </section>
+<section
+  id="pricing"
+  className="px-20 bg-cover bg-center relative bg-white flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen"
+>
+  <div className="w-full lg:w-1/2">
+    <img
+      src="public/bg2.png"
+      alt="Background"
+      className="w-full h-auto max-h-screen object-cover"
+    />
+  </div>
+  <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 justify-center lg:justify-start items-center p-8">
+    <h3 className="text-3xl font-bold mb-12 mt-14 md:text-5xl font-bold ">
+      Free Forever
+    </h3>
+   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Conversion multi-formats</p></div>
+   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Nombre illimité de conversions</p></div>
+   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Vitesse de conversion rapide</p></div>
+   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Accès sans inscription</p></div>
+   <a className='flex items-center pt-14 hover:underline hover:text-[#E66917] cursor-pointer'> <p className='pr-2 text-lg'>Profitez de Fonctionnalités Premium</p> <BsArrowRight className='text-[#E66917] text-3xl' /> </a>
+  </div>
+</section>
 
       {/* FAQ */}
       <section id="faq" className="py-20 bg-white">
