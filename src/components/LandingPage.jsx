@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'; // Pour le smooth scrolling
 import { Transition } from '@headlessui/react'; // Pour les animations
-import { BsCheckLg,BsArrowRight } from "react-icons/bs";
+import { BsCheckLg, BsArrowRight } from "react-icons/bs";
 import FeatureCard from './FeatureCard';
 import FeaturesSection from './FeatureSection';
+import ButtonMobile from './ButtonMobile';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -174,19 +175,84 @@ const LandingPage = () => {
         </div>
       </section>
 
-    
-     {/* Features */}
-<section id="features" className="py-24 bg-[#FFFDFA]">
-  <div className="container mx-auto px-6 md:px-12">
-    <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 mx-40 text-gray-800">
-      Des Fonctionnalités Puissantes pour une Conversion Fluide
-    </h3>
-    <FeaturesSection/>
-  </div>
-</section>
+
+      {/* Features */}
+      <section id="features" className="pt-10 pb-16 bg-[#FFFDFA]">
+        <div className="container mx-auto px-6 md:px-12">
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 mx-40 text-gray-800">
+            Des Fonctionnalités Puissantes pour une Conversion Fluide
+          </h3>
+          <FeaturesSection />
+        </div>
+      </section>
 
 
-     
+      {/* Device */}
+
+      <section className='bg-white px-20' >
+        {/* Web*/}
+        <div
+          className="bg-cover bg-center relative flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen"
+        >
+          <div className="w-full lg:w-1/2">
+            <img
+              src="public/webJSCF.png"
+              alt="Web App"
+              className="w-full h-auto max-h-[500px] lg:max-h-[600px] object-cover"
+            />
+          </div>
+          <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 flex flex-col justify-center items-center lg:items-start p-4 lg:p-8">
+            <h3 className="text-3xl font-bold mb-14 md:text-4xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius nobis modi quas asperiores.
+
+            </h3>
+            <div className='mb-14'>
+              <p className='pl-2 text-base'>Conversion multi-formats Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ad.</p>
+            </div>
+
+            <a
+              href="#download"
+              className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
+            >
+              GET STARTED
+            </a>
+
+          </div>
+        </div>
+
+        {/* mobile*/}
+        <div
+          className="bg-cover bg-center relative flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen"
+        >
+
+          <div className="w-full relative z-10 lg:w-1/2 text-center lg:text-left text-gray-800 flex flex-col justify-center items-center lg:items-start p-4 lg:p-8 ">
+            <h3 className="text-3xl font-bold mb-14 md:text-4xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius nobis modi quas asperiores.
+
+            </h3>
+            <div className='mb-14'>
+              <p className='pl-2 text-base'>Conversion multi-formats Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ad.</p>
+            </div>
+            <ButtonMobile/>
+          </div>
+
+          <div className="w-full lg:w-1/2 pl-20">
+            <img
+              src="public/mobileApp.png"
+              alt="Web App"
+              className="w-full relative z-10 h-auto max-w-[300px] max-h-[300px] md:max-w-[350px] md:max-h-[350px] lg:max-w-[450px] lg:max-h-[450px] object-cover"
+            />
+          </div>
+        </div>
+
+
+
+
+
+      </section>
+
+
+
 
       {/* Demo Section */}
       <section className="py-20 bg-gray-100">
@@ -219,28 +285,28 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing */}
-<section
-  id="pricing"
-  className="px-20 bg-cover bg-center relative bg-white flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen"
->
-  <div className="w-full lg:w-1/2">
-    <img
-      src="public/bg2.png"
-      alt="Background"
-      className="w-full h-auto max-h-screen object-cover"
-    />
-  </div>
-  <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 justify-center lg:justify-start items-center p-8">
-    <h3 className="text-3xl font-bold mb-12 mt-14 md:text-5xl font-bold ">
-      Free Forever
-    </h3>
-   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Conversion multi-formats</p></div>
-   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Nombre illimité de conversions</p></div>
-   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Vitesse de conversion rapide</p></div>
-   <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Accès sans inscription</p></div>
-   <a className='flex items-center pt-14 hover:underline hover:text-[#E66917] cursor-pointer'> <p className='pr-2 text-lg'>Profitez de Fonctionnalités Premium</p> <BsArrowRight className='text-[#E66917] text-3xl' /> </a>
-  </div>
-</section>
+      <section
+        id="pricing"
+        className="px-20 bg-cover bg-center relative bg-white flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen"
+      >
+        <div className="w-full lg:w-1/2">
+          <img
+            src="public/bg2.png"
+            alt="Background"
+            className="w-full h-auto max-h-screen object-cover"
+          />
+        </div>
+        <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 justify-center lg:justify-start items-center p-8">
+          <h3 className="text-3xl font-bold mb-12 mt-14 md:text-5xl font-bold ">
+            Free Forever
+          </h3>
+          <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Conversion multi-formats</p></div>
+          <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Nombre illimité de conversions</p></div>
+          <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Vitesse de conversion rapide</p></div>
+          <div className='flex items-center'> <BsCheckLg className='text-[#E66917] text-3xl' /> <p className='pl-2 text-lg'> Accès sans inscription</p></div>
+          <a className='flex items-center pt-14 hover:underline hover:text-[#E66917] cursor-pointer'> <p className='pr-2 text-lg'>Profitez de Fonctionnalités Premium</p> <BsArrowRight className='text-[#E66917] text-3xl' /> </a>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section id="faq" className="py-20 bg-white">

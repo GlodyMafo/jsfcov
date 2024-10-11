@@ -22,30 +22,11 @@ const FeaturesSection = () => {
       subtitle: "Anti-Âge",
       Icon: FaSmile,
       features: ["Reduces Fine Lines", "Firming Effect", "Collagen Boost", "Elasticity Improvement"],
-    },
-    {
-      title: "Nouveau Produit",
-      subtitle: "Anti-Inflammatoire",
-      Icon: FaHeartbeat,
-      features: ["Calms Redness", "Soothes Irritation", "Reduces Swelling", "Promotes Healing"],
-    },
-    {
-      title: "Nouveau Produit",
-      subtitle: "Anti-Inflammatoire",
-      Icon: FaHeartbeat,
-      features: ["Calms Redness", "Soothes Irritation", "Reduces Swelling", "Promotes Healing"],
-    },
-    {
-      title: "Nouveau Produit",
-      subtitle: "Anti-Inflammatoire",
-      Icon: FaHeartbeat,
-      features: ["Calms Redness", "Soothes Irritation", "Reduces Swelling", "Promotes Healing"],
     }
-    // Ajoutez autant de produits que nécessaire
   ];
 
   return (
-    <div className="features-section flex flex-wrap gap-6 justify-center">
+    <div className="features-section pb-10 flex flex-wrap gap-6 justify-center">
       {featuresData.map((product, index) => (
         <FeatureCard
           key={index}
