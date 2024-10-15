@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheck } from 'react-icons/fa'; // Importez l'icône de coche
+import { FaCheck } from 'react-icons/fa';
 
 const FeatureCard = ({ title, subtitle, Icon, features }) => {
   return (
@@ -16,7 +16,7 @@ const FeatureCard = ({ title, subtitle, Icon, features }) => {
         >
           {title}
         </p>
-        <p className="font-bold text-lg tracking-wider text-[#495c48] z-20">
+        <p className="font-bold text-lg tracking-wider text-[#A94D12] z-20">
           {subtitle}
         </p>
       </div>
@@ -25,14 +25,14 @@ const FeatureCard = ({ title, subtitle, Icon, features }) => {
       >
         {Icon && (
           <div className="w-full h-full flex items-center justify-center">
-            <Icon size={48} color="#495c48" aria-label={`${subtitle} icon`} />
+            <Icon size={48} color="#A94D12" aria-label={`${subtitle} icon`} />
           </div>
         )}
         <div
           className="tooltips absolute top-0 left-0 -translate-x-[150%] p-2 flex flex-col items-start gap-4 transition-all duration-300 group-hover:-translate-x-full z-10"
         >
           <p
-            className="text-[#7b956a] font-semibold text-lg uppercase group-hover:delay-1000 transition-all opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-500"
+            className="text-[#E98D52] font-semibold text-lg uppercase group-hover:delay-1000 transition-all opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-500"
           >
             {subtitle}
           </p>
@@ -47,8 +47,8 @@ const FeatureCard = ({ title, subtitle, Icon, features }) => {
                   "group-hover:delay-500"
                 }`}
               >
-                <FaCheck className="stroke-[#495c48]" size={10} />
-                <p className="text-xs font-semibold text-[#495c48]">{feature}</p>
+                <FaCheck className="stroke-[#A94D12]" size={10} />
+                <p className="text-xs font-semibold text-[#A94D12]">{feature}</p>
               </li>
             ))}
           </ul>

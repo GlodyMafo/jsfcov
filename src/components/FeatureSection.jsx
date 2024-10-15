@@ -1,14 +1,14 @@
 // FeaturesSection.jsx
 import React from "react";
 import FeatureCard from "./FeatureCard";
-import { FaWater, FaShieldAlt, FaSmile, FaHeartbeat } from 'react-icons/fa'; // Importez les icônes nécessaires
+import { FaWater, FaShieldAlt, FaSmile, FaHeartbeat } from 'react-icons/fa'; 
 
 const FeaturesSection = () => {
   const featuresData = [
     {
       title: "Nouveau Produit",
       subtitle: "Hydration",
-      Icon: FaWater, // Passez l'icône directement
+      Icon: FaWater, 
       features: ["Hydration", "Protect Skin Barrier", "Reduce Wrinkles", "Anti Inflammatory"],
     },
     {

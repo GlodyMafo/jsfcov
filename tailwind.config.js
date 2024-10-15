@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -10,6 +11,7 @@ module.exports = {
         'spin-slow': 'spin 8s linear infinite',
         'pulse': 'pulse 6s infinite',
       },
+     
     },
   },
   plugins: [],
