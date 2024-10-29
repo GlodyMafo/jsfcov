@@ -107,7 +107,7 @@ const LandingPage = () => {
         <div className="relative z-10 w-full lg:w-1/2 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold mb-10 animate-fadeInUp">Convert Your Files in a Snap with Josephine Files Converter !</h2>
           <p className="text-lg md:text-xl mb-10 animate-fadeInUp delay-200">
-          With Josephine File Converter, simplify your file conversions and get high-quality results in just a few clicks—100% free for basic users. Enjoy fast, reliable conversions designed to meet all your document needs with ease.
+          With Josephine File Converter, simplify your file conversions and get high-quality results in just a few click 100% free for basic users. Enjoy fast, reliable conversions designed to meet all your document needs with ease.
           </p>
           <Link
             to="/application"
