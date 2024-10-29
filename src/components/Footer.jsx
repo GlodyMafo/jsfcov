@@ -35,7 +35,7 @@ const Footer = () => {
               <img src="/Logo.png" alt="Logo Appwind" className="h-22" />
             </div>
             <p className="text-gray-500 leading-relaxed">
-            We are dedicated to providing the best digital solutions. Join us to stay ahead of the latest trends in file conversion!
+            We are dedicated to providing the best digital solutions. Join us to stay ahead of the latest trends in file conversion !
             </p>
           </div>
 
