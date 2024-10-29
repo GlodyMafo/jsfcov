@@ -36,7 +36,7 @@ const LandingPage = () => {
       {/* Header */}
       <header className={`fixed top-0 w-full transition duration-300 z-50 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container mx-auto py-4 flex justify-between items-center px-4 md:px-20">
-          <img src="josephine_Logo.png" alt="Logo" className={`w-32 md:w-40 transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
+          <a href="#"><img src="josephine_Logo.png" alt="Logo" className={`w-32 md:w-40 transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`} /></a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex">
