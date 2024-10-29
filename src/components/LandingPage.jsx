@@ -119,7 +119,7 @@ const LandingPage = () => {
 
         {/* Image */}
         <div className="relative z-10 pb-10 w-full lg:w-[450px] mt-10 lg:mt-16 flex justify-center">
-          <img src="public/img-1.svg" alt="Josephine File Converter" className="w-3/4 md:w-full animate-slideInRight" />
+          <img src="img-1.svg" alt="Josephine File Converter" className="w-3/4 md:w-full animate-slideInRight" />
         </div>
       </section>
 

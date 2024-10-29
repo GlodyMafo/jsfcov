@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const PartnersSection = () => {
   const logos = [
-    { id: 1, name: 'ADP', imgSrc: 'public/adp.png' },
-    { id: 2, name: 'CMB', imgSrc: 'public/cmb.png' },
-    { id: 3, name: 'GSF', imgSrc: 'public/gsf.png' },
-    { id: 4, name: 'TMI', imgSrc: 'public/tmi.png' },
-    { id: 5, name: '243', imgSrc: 'public/243.png' },
-    { id: 6, name: 'CUMORAH', imgSrc: 'public/cumorah.png' },
-    { id: 7, name: 'WM', imgSrc: 'public/WM.png' },
-    { id: 8, name: 'RG', imgSrc: 'public/rg.png' },
+    { id: 1, name: 'ADP', imgSrc: 'adp.png' },
+    { id: 2, name: 'CMB', imgSrc: 'cmb.png' },
+    { id: 3, name: 'GSF', imgSrc: 'gsf.png' },
+    { id: 4, name: 'TMI', imgSrc: 'tmi.png' },
+    { id: 5, name: '243', imgSrc: '243.png' },
+    { id: 6, name: 'CUMORAH', imgSrc: 'cumorah.png' },
+    { id: 7, name: 'WM', imgSrc: 'WM.png' },
+    { id: 8, name: 'RG', imgSrc: 'rg.png' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

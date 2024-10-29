@@ -21,7 +21,7 @@ function Features() {
                 <div className="bg-cover bg-center relative flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen">
                     <div className="w-full lg:w-1/2">
                         <img
-                            src="public/webJSCF.png"
+                            src="webJSCF.png"
                             alt="Web App"
                             className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-cover"
                         />
@@ -47,7 +47,7 @@ function Features() {
                 <div className="bg-cover bg-center relative flex flex-col lg:flex-row items-center lg:items-start lg:min-h-screen mt-8">
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
                         <img
-                            src="public/mobileApp.png"
+                            src="mobileApp.png"
                             alt="Mobile App"
                             className="w-full h-auto max-w-[300px] max-h-[300px] md:max-w-[350px] md:max-h-[350px] lg:max-w-[450px] lg:max-h-[450px] object-cover"
                         />

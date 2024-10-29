@@ -23,19 +23,19 @@ const Testimonials = () => {
       name: "Michel Lenge",
       title: "Consultant en informatique",
       feedback: "Josephine File Converter a simplifié mes conversions de fichiers et me fait gagner beaucoup de temps. Très intuitif et facile à utiliser !",
-      avatar: "public/michel.jpg",
+      avatar: "michel.jpg",
     },
     {
       name: "Divine Baker",
       title: "Spécialiste de la gestion de documents",
       feedback: "Le convertisseur Josephine est un outil indispensable pour mes documents quotidiens. Rapide et fiable !",
-      avatar: "public/divine.jpg",
+      avatar: "divine.jpg",
     },
     {
       name: "Jerry Lunda",
       title: "Analyste de données",
       feedback: "Josephine File Converter m'aide à transformer mes fichiers sans effort et gratuitement !",
-      avatar: "public/jerry.jpg",
+      avatar: "jerry.jpg",
     },
   ];
 
@@ -84,7 +84,7 @@ const Testimonials = () => {
       
       {/* Image de droite pour les grands écrans */}
       <div className='hidden lg:block w-full lg:w-1/2'>
-        <img src="public/client.png" alt="Client" className='w-auto h-[100vh] pl-20' />
+        <img src="client.png" alt="Client" className='w-auto h-[100vh] pl-20' />
       </div>
     </div>
   );

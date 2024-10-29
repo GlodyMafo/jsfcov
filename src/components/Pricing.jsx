@@ -8,7 +8,7 @@ function Pricing() {
       {/* Image Section (Hidden on Mobile) */}
       <div className="w-full lg:w-1/2 hidden lg:block">
         <img
-          src="public/bg2.png"
+          src="bg2.png"
           alt="Background"
           className="w-full h-auto object-cover"
         />
