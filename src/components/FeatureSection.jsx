@@ -8,13 +8,13 @@ const FeaturesSection = () => {
     {
       title: "Quick Conversion",
       subtitle: "Save Time",
-      Icon: FaFileUpload, 
+      Icon: FaClock, 
       features: ["Supports Various Formats", "Instant Conversions"],
     },
     {
       title: "More Done, Less Effort",
       subtitle: "Smooth Workflow",
-      Icon: FaClock,
+      Icon:FaFileUpload,
       features: ["Batch Processing", "Conversion History"],
     },
     {

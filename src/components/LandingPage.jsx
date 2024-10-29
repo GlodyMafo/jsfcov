@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import PartnersSection from './Parteners';
 import Testimonials from './Testimonial';
 import Footer from './Footer';
 import FAQ from './Faq';
 import Pricing from './Pricing';
 import Features from './Features';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +19,11 @@ const LandingPage = () => {
   const handleScroll = () => {
     const offset = window.scrollY;
     setIsScrolled(offset > 50);
+  };
+
+  const handleNavigationClick = (id) => {
+    gsap.to(window, { duration: 1, scrollTo: `#${id}`, ease: 'power2.out' });
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -35,9 +44,8 @@ const LandingPage = () => {
               {["about", "features", "pricing", "contact"].map((item) => (
                 <li key={item}>
                   <Link
-                    to={item}
-                    smooth={true}
-                    duration={500}
+                    to="/"
+                    onClick={() => handleNavigationClick(item)}
                     className={`font-semibold text-lg cursor-pointer transition-colors duration-300 ${isScrolled ? 'text-gray-800 hover:text-[#E98D52]' : 'text-gray-800 hover:text-[#E98D52]'}`}
                   >
                     {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -83,10 +91,8 @@ const LandingPage = () => {
                 {["about", "features", "pricing", "contact"].map((item) => (
                   <li key={item}>
                     <Link
-                      to={item}
-                      smooth={true}
-                      duration={500}
-                      onClick={() => setIsMenuOpen(false)}
+                      to="/"
+                      onClick={() => handleNavigationClick(item)}
                       className={`block text-lg cursor-pointer transition-colors duration-300 ${isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-gray-800 hover:text-blue-400'}`}
                     >
                       {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -100,18 +106,18 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-80 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-20 lg:h-screen">
+      <section id="about" className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-80 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-20 lg:h-screen">
         <div className="absolute inset-0 bg-white opacity-85 backdrop-filter backdrop-blur-lg z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 w-full lg:w-1/2 text-center lg:text-left">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 animate-fadeInUp">Convert Your Files in a Snap with Josephine Files Converter !</h2>
-          <p className="text-lg md:text-xl mb-10 animate-fadeInUp delay-200">
-          With Josephine File Converter, simplify your file conversions and get high-quality results in just a few click 100% free for basic users. Enjoy fast, reliable conversions designed to meet all your document needs with ease.
+          <h2 className="text-4xl md:text-5xl font-bold mb-10">Convert Your Files in a Snap with Josephine Files Converter!</h2>
+          <p className="text-lg md:text-xl mb-10">
+            With Josephine File Converter, simplify your file conversions and get high-quality results in just a few clicks 100% free for basic users. Enjoy fast, reliable conversions designed to meet all your document needs with ease.
           </p>
           <Link
             to="/application"
-            className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
+            className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105"
           >
             Convert Now for Free
           </Link>
@@ -119,20 +125,24 @@ const LandingPage = () => {
 
         {/* Image */}
         <div className="relative z-10 pb-10 w-full lg:w-[450px] mt-10 lg:mt-16 flex justify-center">
-          <img src="img-1.svg" alt="Josephine File Converter" className="w-3/4 md:w-full animate-slideInRight" />
+          <img src="img-1.svg" alt="Josephine File Converter" className="w-3/4 md:w-full" />
         </div>
       </section>
 
-      {/* Other sections */}
-      <Features />
+      {/* Other sections with IDs */}
+      <section id="features">
+        <Features />
+      </section>
       <section id="pricing">
         <Pricing />
       </section>
-      <section className='bg-cover bg-[#FAFAFA]'>
+      <section id="partners" className="bg-cover bg-[#FAFAFA]">
         <PartnersSection />
         <Testimonials />
       </section>
-      <FAQ />
+      <section id="faq">
+        <FAQ />
+      </section>
       <Footer />
     </div>
   );

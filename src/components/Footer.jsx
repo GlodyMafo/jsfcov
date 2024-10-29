@@ -7,7 +7,7 @@ const quickLinks = [
   { name: 'Support & Help', href: '#' },
   { name: 'Privacy Policy', href: '#' },
   { name: 'Terms of Service', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'API', href: '#' },
 ];
 
 const socialMedia = [
