@@ -53,10 +53,9 @@ const PartnersSection = () => {
   return (
     <div className="w-full max-w-5xl mx-auto pb-20 pt-10 px-10">
       <h2 className="text-center font-bold text-4xl text-gray-800 mb-10">Trusted by</h2>
-      <p className='px-6 md:px-20 text-center mb-10'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolores? Velit perferendis optio nam excepturi quo. Nihil optio perspiciatis totam sequi, quas recusandae voluptatibus magni autem vero delectus quisquam nam. Earum, maxime culpa! Fugiat excepturi sed provident, animi perferendis tenetur?
-      </p>
-      <div className="relative overflow-hidden">
+      <p className='px-6 md:px-20 text-center mb-10 text-xl sm:text-2xl text-gray-800'>
+      Trusted by Leading Companies Worldwide! <br /> Join a roster of satisfied clients who rely on our robust and efficient tool to enhance productivity and ensure seamless workflows.      </p>
+      <div className="relative overflow-hidden mt-10">
         <div
           ref={logosRef}
           className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}

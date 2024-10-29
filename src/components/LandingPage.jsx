@@ -100,20 +100,20 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-80 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-32 lg:h-screen">
+      <section className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-80 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-20 lg:h-screen">
         <div className="absolute inset-0 bg-white opacity-85 backdrop-filter backdrop-blur-lg z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 w-full lg:w-1/2 text-center lg:text-left">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 animate-fadeInUp">Convertissez vos fichiers en un clin d'œil !</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 animate-fadeInUp">Convert Your Files in a Snap with Josephine Files Converter!</h2>
           <p className="text-lg md:text-xl mb-10 animate-fadeInUp delay-200">
-            Avec Josephine File Converter, simplifiez la conversion de vos fichiers et obtenez des résultats de haute qualité en quelques clics et 100% gratuit pour les utilisateurs de base.
+          With Josephine File Converter, simplify your file conversions and get high-quality results in just a few clicks—100% free for basic users. Enjoy fast, reliable conversions designed to meet all your document needs with ease.
           </p>
           <Link
             to="/application"
             className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
           >
-            GET STARTED
+            Convert Now for Free
           </Link>
         </div>
 

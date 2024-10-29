@@ -6,22 +6,22 @@ import { FaFileUpload, FaClock, FaCog } from 'react-icons/fa';
 const FeaturesSection = () => {
   const featuresData = [
     {
-      title: "Conversion Rapide",
-      subtitle: "Gagnez du temps",
+      title: "Quick Conversion",
+      subtitle: "Save Time",
       Icon: FaFileUpload, 
-      features: ["Formats multiples pris en charge", "Conversions instantanées"],
+      features: ["Supports Various Formats", "Instant Conversions"],
     },
     {
-      title: "Gain de Temps",
-      subtitle: "Bon flux de travail",
+      title: "More Done, Less Effort",
+      subtitle: "Smooth Workflow",
       Icon: FaClock,
-      features: ["Traitement en masse", "Historique des conversions"],
+      features: ["Batch Processing", "Conversion History"],
     },
     {
-      title: "Facilité d'Utilisation",
-      subtitle: "Interface conviviale",
+      title: "Ease of Use",
+      subtitle: "User-Friendly",
       Icon: FaCog,
-      features: ["Drag & Drop", "Navigation intuitive"],
+      features: ["Drag & Drop", "Intuitive Navigation"],
     }
   ];
 

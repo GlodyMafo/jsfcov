@@ -21,20 +21,20 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Michel Lenge",
-      title: "Consultant en informatique",
-      feedback: "Josephine File Converter a simplifié mes conversions de fichiers et me fait gagner beaucoup de temps. Très intuitif et facile à utiliser !",
+      title: "Archivist",
+      feedback: "As an archivist, Josephine File Converter has simplified my file conversions and saved me a lot of time. It’s incredibly intuitive and easy to use! Experience it yourself and discover the benefits! !",
       avatar: "michel.jpg",
     },
     {
       name: "Divine Baker",
-      title: "Spécialiste de la gestion de documents",
-      feedback: "Le convertisseur Josephine est un outil indispensable pour mes documents quotidiens. Rapide et fiable !",
+      title: "Student at UQTR",
+      feedback: "Josephine Converter is an essential tool for my daily university documents. It's fast, reliable, and makes my life so much easier! Try it out and see the difference for yourself!",
       avatar: "divine.jpg",
     },
     {
       name: "Jerry Lunda",
-      title: "Analyste de données",
-      feedback: "Josephine File Converter m'aide à transformer mes fichiers sans effort et gratuitement !",
+      title: "Data Analyst",
+      feedback: "As a data analyst, Josephine File Converter helps me transform files effortlessly and for free! It's fast, reliable, and user-friendly—an invaluable tool for my work!",
       avatar: "jerry.jpg",
     },
   ];
@@ -42,13 +42,13 @@ const Testimonials = () => {
   return (
     <div className="w-full bg-[#F5F5F5] py-12 flex flex-col lg:flex-row items-center justify-between px-10 lg:px-16 lg:h-[100vh] lg:py-28">
       <div className='w-full lg:w-1/2 mb-8 lg:mb-0'>
-        <h2 className="text-3xl font-bold text-center mb-8">Ce que disent nos utilisateurs satisfaits !</h2>
+        <h2 className="text-center font-bold text-4xl text-gray-800 mb-8">What Our Satisfied Users Are Saying!</h2>
         <div className="max-w-3xl mx-auto text-center">
           <div className="px-4">
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="p-4">
-                  <p className="text-lg text-gray-700 mb-6">{testimonial.feedback}</p>
+                  <p className="text-lg text-gray-700">{testimonial.feedback}</p>
                 </div>
               ))}
             </Slider>

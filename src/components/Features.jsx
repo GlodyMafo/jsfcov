@@ -9,7 +9,7 @@ function Features() {
             <section id="features" className="pt-10 pb-16 bg-[#FFFDFA]">
                 <div className="container mx-auto px-6 md:px-12">
                     <h3 className="text-3xl md:text-4xl font-bold lg:px- text-center mb-12 text-gray-800">
-                        Des Fonctionnalités Puissantes pour une Conversion Fluide
+                    Powerful Features for Seamless Conversion
                     </h3>
                     <FeaturesSection />
                 </div>
@@ -28,17 +28,17 @@ function Features() {
                     </div>
                     <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 flex flex-col justify-center items-center lg:items-start p-4 lg:p-8">
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-10">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius nobis modi quas asperiores.
+                        Experience the convenience of Josephine Files Converter directly from your browser.
                         </h3>
                         <div className='mb-10'>
-                            <p className='pl-2 text-base'>Conversion multi-formats Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ad.</p>
+                            <p className='pl-2 text-base text-xl'>With our web-based platform, you can access powerful file conversion features anytime, anywhere, without the need for downloads or installations. <br /> Whether you're at home, in the office, or on the go, our web application ensures that your file conversion needs are just a click away!</p>
                         </div>
 
                         <Link  to="/application"
                             href="#download"
                             className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
                         >
-                            GET STARTED
+                            Access Online
                         </Link>
                     </div>
                 </div>
@@ -55,10 +55,10 @@ function Features() {
 
                     <div className="w-full lg:w-1/2 text-center lg:text-left text-gray-800 flex flex-col justify-center items-center lg:items-start p-4 lg:p-8 order-2 lg:order-1">
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-10">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius nobis modi quas asperiores.
+                        Discover Josephine Files Converter on Mobile! <br /> Effortlessly convert files anytime, anywhere!
                         </h3>
                         <div className='mb-10'>
-                            <p className='pl-2 text-base'>Conversion multi-formats Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ad.</p>
+                            <p className='pl-2 text-base text-xl'>Our mobile app offers the same powerful features you love, optimized for your smartphone. Enjoy intuitive navigation, instant conversions, and support for multiple formats right in your pocket.</p>
                         </div>
                         <ButtonMobile />
                     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiPlus, FiMinus } from 'react-icons/fi'; // Import icons
+import { FiPlus, FiMinus } from 'react-icons/fi'; 
 
 const FAQ = () => {
   const [openQuestion, setOpenQuestion] = useState(null);
@@ -15,16 +15,15 @@ const FAQ = () => {
           {/* Left section */}
           <div className="max-w-lg mb-12 md:mb-0">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Nous collaborons avec les universités les plus renommées
+            Your Questions Answered: Frequently Asked Questions
             </h3>
-            <p className="mb-6 text-gray-600 leading-relaxed">
-              Etiam erat velit scelerisque in dictum non consectetur. Nisl purus in mollis nunc sed id semper. Cras fermentum odio eu feugiat pretium nibh ipsum.
-            </p>
+            <p className="mb-6 text-xl text-gray-800 leading-relaxed">
+            Explore Our Frequently Asked Questions to Find the Answers You Need. Whether you have inquiries about using Josephine File Converter, its features, or troubleshooting tips, our comprehensive FAQ section is here to assist you.</p>
             <a
               href="#download"
               className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105"
             >
-              DISCUTONS
+              Let's discuss
             </a>
           </div>
 
@@ -65,16 +64,16 @@ const FAQ = () => {
 // FAQ data
 const faqData = [
   {
-    question: 'Comment puis-je commencer ?',
-    answer: 'Inscrivez-vous gratuitement, téléchargez vos fichiers et commencez à les convertir immédiatement.'
+    question: 'What file formats does Josephine File Converter support?',
+    answer: 'Josephine File Converter supports a wide range of file formats, including PDF, DOCX, JPG, PNG, and more. You can easily convert between these formats to meet your needs.'
   },
   {
-    question: 'Quels formats de fichiers sont pris en charge ?',
-    answer: 'Nous prenons en charge une large gamme de formats, y compris PDF, DOCX, JPG, PNG, et bien d\'autres.'
+    question: 'Is Josephine File Converter really free?',
+    answer: 'Yes, Josephine File Converter is free to use forever! While we offer premium features for enhanced functionality, the basic conversion options are completely free with no hidden fees.'
   },
   {
-    question: 'Y a-t-il une limite de taille de fichier ?',
-    answer: 'Les utilisateurs gratuits ont une limite de taille de fichier, tandis que les abonnés Pro bénéficient de limites étendues.'
+    question: 'Is my data safe when using Josephine File Converter?',
+    answer: 'Absolutely! We prioritize your privacy and security. All files are processed securely, and we do not store your files after conversion. You can trust that your data is safe with us.'
   }
 ];
 
