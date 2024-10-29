@@ -113,7 +113,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-8 text-gray-500">
-          <p className="text-sm">&copy; {new Date().getFullYear()}Josephine Files Converter, All Rights Reserved. | By Glody Mafo.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Josephine Files Converter, All Rights Reserved. | By Glody Mafo.</p>
         </div>
       </div>
     </footer>
