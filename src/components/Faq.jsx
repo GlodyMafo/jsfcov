@@ -15,7 +15,7 @@ const FAQ = () => {
           {/* Left section */}
           <div className="max-w-lg mb-12 md:mb-0">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Your Questions Answered: Frequently Asked Questions
+            Your Questions Answered : Frequently Asked Questions
             </h3>
             <p className="mb-6 text-xl text-gray-800 leading-relaxed">
             Explore Our Frequently Asked Questions to Find the Answers You Need. Whether you have inquiries about using Josephine File Converter, its features, or troubleshooting tips, our comprehensive FAQ section is here to assist you.</p>
