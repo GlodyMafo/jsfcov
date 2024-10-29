@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturesSection from './FeatureSection';
 import ButtonMobile from './ButtonMobile';
+import { Link } from 'react-router-dom';
 
 function Features() {
     return (
@@ -33,12 +34,12 @@ function Features() {
                             <p className='pl-2 text-base'>Conversion multi-formats Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ad.</p>
                         </div>
 
-                        <a
+                        <Link  to="/application"
                             href="#download"
                             className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
                         >
                             GET STARTED
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

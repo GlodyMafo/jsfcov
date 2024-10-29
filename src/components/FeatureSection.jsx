@@ -1,27 +1,27 @@
 // FeaturesSection.jsx
 import React from "react";
 import FeatureCard from "./FeatureCard";
-import { FaWater, FaShieldAlt, FaSmile, FaHeartbeat } from 'react-icons/fa'; 
+import { FaFileUpload, FaClock, FaCog } from 'react-icons/fa'; 
 
 const FeaturesSection = () => {
   const featuresData = [
     {
-      title: "Nouveau Produit",
-      subtitle: "Hydration",
-      Icon: FaWater, 
-      features: ["Hydration", "Protect Skin Barrier", "Reduce Wrinkles", "Anti Inflammatory"],
+      title: "Conversion Rapide",
+      subtitle: "Gagnez du temps",
+      Icon: FaFileUpload, 
+      features: ["Formats multiples pris en charge", "Conversions instantanées"],
     },
     {
-      title: "Nouveau Produit",
-      subtitle: "Protection",
-      Icon: FaShieldAlt,
-      features: ["Sun Protection", "UV Shield", "Antioxidant Rich", "Long Lasting"],
+      title: "Gain de Temps",
+      subtitle: "Bon flux de travail",
+      Icon: FaClock,
+      features: ["Traitement en masse", "Historique des conversions"],
     },
     {
-      title: "Nouveau Produit",
-      subtitle: "Anti-Âge",
-      Icon: FaSmile,
-      features: ["Reduces Fine Lines", "Firming Effect", "Collagen Boost", "Elasticity Improvement"],
+      title: "Facilité d'Utilisation",
+      subtitle: "Interface conviviale",
+      Icon: FaCog,
+      features: ["Drag & Drop", "Navigation intuitive"],
     }
   ];
 

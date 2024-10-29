@@ -44,7 +44,7 @@ const FileUpload = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://api-jfc.onrender.com/pdftoword', formData, {
+      const response = await axios.post('http://localhost:8000/pdftoword', formData, {
         responseType: 'blob',
       });
 

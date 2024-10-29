@@ -88,7 +88,7 @@ const Footer = () => {
                   id="newsletter-email"
                   type="email"
                   placeholder="Entrez votre email"
-                  className="pl-10 px-4 py-2 border border-gray-300 rounded-lg sm:rounded-l-none sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-[#E98D52] w-full"
+                  className="pl-10 px-4 py-2 border border-gray-300 rounded-lg sm:rounded-l-none sm:rounded-r-none focus:outline-none w-full"
                   required
                 />
               </div>

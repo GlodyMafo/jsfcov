@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'; 
-import { Link } from 'react-scroll';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 import PartnersSection from './Parteners';
 import Testimonials from './Testimonial';
@@ -28,7 +28,7 @@ const LandingPage = () => {
       <header className={`fixed top-0 w-full transition duration-300 z-50 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container mx-auto py-4 flex justify-between items-center px-4 md:px-20">
           <img src="public/josephine_Logo.png" alt="Logo" className={`w-32 md:w-40 transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'}`} />
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-6">
@@ -46,7 +46,7 @@ const LandingPage = () => {
               ))}
             </ul>
           </nav>
-          
+
           {/* Mobile Navigation Button */}
           <div className="md:hidden">
             <button
@@ -79,7 +79,7 @@ const LandingPage = () => {
         >
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
-              <ul ref={ref} className={`px-6  w-[30%] ml-[280px] pt-4 pb-2 space-y-2 ${isScrolled ? 'bg-white' : 'bg-white'}`}>
+              <ul ref={ref} className={`px-6 w-[30%] ml-[280px] pt-4 pb-2 space-y-2 ${isScrolled ? 'bg-white' : 'bg-white'}`}>
                 {["about", "features", "pricing", "contact"].map((item) => (
                   <li key={item}>
                     <Link
@@ -100,22 +100,21 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-20 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-32 lg:h-screen">
-        {/* Gradient Overlay for Flou */}
+      <section className="relative bg-gradient-to-r from-white via-[#E16718] via-[#FF8C00] to-gray-200 text-gray-800 py-28 lg:py-80 flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-16 lg:px-32 lg:h-screen">
         <div className="absolute inset-0 bg-white opacity-85 backdrop-filter backdrop-blur-lg z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 w-full lg:w-1/2 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold mb-10 animate-fadeInUp">Convertissez vos fichiers en un clin d'œil !</h2>
           <p className="text-lg md:text-xl mb-10 animate-fadeInUp delay-200">
-            Josephine File Converter facilite la conversion de vos fichiers avec des résultats de haute qualité.
+            Avec Josephine File Converter, simplifiez la conversion de vos fichiers et obtenez des résultats de haute qualité en quelques clics et 100% gratuit pour les utilisateurs de base.
           </p>
-          <a
-            href="#download"
+          <Link
+            to="/application"
             className="inline-block bg-[#E98D52] text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-[#A94D12] transition transform hover:scale-105 animate-fadeInUp delay-400"
           >
             GET STARTED
-          </a>
+          </Link>
         </div>
 
         {/* Image */}
@@ -124,24 +123,16 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Features */}
+      {/* Other sections */}
       <Features />
-
-      {/* Pricing */}
       <section id="pricing">
         <Pricing />
       </section>
-
-      {/* Partenaires */}
       <section className='bg-cover bg-[#FAFAFA]'>
         <PartnersSection />
         <Testimonials />
       </section>
-
-      {/* FAQ */}
       <FAQ />
-      
-      {/* Footer */}
       <Footer />
     </div>
   );
